@@ -1,3 +1,3 @@
 # Studentu saraksts
 # Julia D
-# Jane Doe
+# John Doe
