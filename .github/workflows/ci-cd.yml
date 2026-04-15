@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lejupieladet repozitorija kodu
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Parbaudit, vai eksiste Students.md
         run: |
           if [ ! -f students.md ]; then
