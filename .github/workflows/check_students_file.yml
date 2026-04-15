@@ -1,0 +1,22 @@
+name: students file check CI/CD
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-students-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lejupieladet repozitorija kodu
+        uses: actions/checkout@v5
+
+      - name: Parbaudit, vai eksiste students.md
+        run: |
+          if [ ! -f students.md ]; then
+            echo "Kļūda: fails students.md nav atrasts!"
+            exit 1
+          fi
+
+      - name: Paradit students.md saturu
+        run: cat students.md
